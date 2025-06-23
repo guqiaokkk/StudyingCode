@@ -1,0 +1,5 @@
+[testlogger][18:52:05][466360][debug   ]hello! guqaio
+[testlogger][18:52:05][466360][info    ]hello! guqaio
+[testlogger][18:52:05][466360][warning ]hello! guqaio
+[testlogger][18:52:05][466360][error   ]hello! guqaio
+[testlogger][18:52:05][466360][critical]hello! guqaio

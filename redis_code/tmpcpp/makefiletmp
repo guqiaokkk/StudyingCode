@@ -1,0 +1,6 @@
+list:list.cc
+	g++ -o $@ $^ -std=c++17 /usr/local/lib/libredis++.a /usr/lib/x86_64-linux-gnu/libhiredis.a -pthread
+    
+    
+    
+    rm -f list
