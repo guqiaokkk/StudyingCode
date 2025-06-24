@@ -1,0 +1,10 @@
+//首行：语法指定行
+
+syntax = "proto3";
+package contacts;//对应的c++代码里会生成对应的命名空间
+
+//定义联系人message
+message PeopelInfo{
+    string name = 1;
+    int32 age = 2; 
+}

@@ -1,0 +1,62 @@
+syntax = "proto3";
+package contact2;
+
+import "google/protobuf/any.proto";//所在目录
+//import "phone.proto";
+
+// message Phone{
+//     string number = 1;
+// }
+
+message Address{
+    string home_address = 1;//家庭住址
+    string work_address = 2;//工作住址
+}
+
+
+message PeopleInfo{
+    string name = 1;
+    int32 age = 2;
+    
+    message Phone{
+        string number = 1;
+        enum PhoneType{
+            MP = 0;//移动电话类型
+            TEL = 1;//固定电话
+        }
+        PhoneType type = 2;
+    }
+    
+    repeated Phone phone = 3;//电话信息
+    
+    google.protobuf.Any data = 4;
+    
+    oneof other_contact{
+        string qq = 5;
+        string vx = 6;
+    }
+
+    map<string, string> remark = 7;//备注信息
+} 
+
+//通讯录message
+message Contacts{
+    repeated PeopleInfo contacts = 1;
+}
+
+
+
+
+
+
+
+
+// message PeopleInfo{
+//     string name = 1;
+//     int32 age = 2;
+//     //repeated string phone_numbers = 3;
+//     message Phone{
+//         string number = 1;
+//     }
+//     repeated phone.Phone phone = 3;
+// } 
